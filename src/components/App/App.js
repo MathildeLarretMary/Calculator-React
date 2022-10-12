@@ -3,7 +3,8 @@ import './App.css';
 import Screen from '../Screen/Screen';
 import Button from '../Button/Button';
 import buttons from '../../data/numbers';
-import { memo, useReducer } from 'react';
+import { useReducer } from 'react';
+// New comment
 
 import { reducer, initialState }  from '../Reducer';
 
@@ -37,4 +38,4 @@ function App() {
 }
 // memo va permettre de ne modifier QUE ce qui est nécéssaire! 
 // rien de plus
-export default memo(App);
+export default App;

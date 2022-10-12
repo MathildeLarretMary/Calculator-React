@@ -9,6 +9,8 @@ const initialState = {
     operator: ""
   }
 
+// const calcElements = ['-', 3, '+', 1];
+
   // actions du reducer
   const reducer = (state, action) => {
 
@@ -33,10 +35,7 @@ const initialState = {
           // on met la valeur de valueOne dans valueTwo
           valueTwo: [state.valueOne],
           // on vide valueOne
-          valueOne: 
-          [state.screen] === "-"
-          ? [state.valueOne] = action.payload
-          : "",
+          valueOne: "",
 
           // on garde l'operator dans la copie du state
           operator: action.payload
