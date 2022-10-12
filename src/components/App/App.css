@@ -1,0 +1,70 @@
+.color1 {color: #000a08;}
+.color2 {color: #051b1f;}
+.color3 {color: #133740;}
+.color4 {color: #285862;}
+.color5 {color: #3f868d;}
+
+html {
+  /* background-color: #000a08; */
+  background-image: linear-gradient(
+  180deg,
+  hsl(189deg 71% 11%) 0%,
+  hsl(188deg 67% 10%) 11%,
+  hsl(187deg 62% 10%) 20%,
+  hsl(185deg 57% 9%) 26%,
+  hsl(184deg 52% 8%) 32%,
+  hsl(182deg 49% 7%) 38%,
+  hsl(179deg 51% 6%) 45%,
+  hsl(177deg 57% 5%) 53%,
+  hsl(175deg 64% 4%) 64%,
+  hsl(172deg 76% 3%) 78%,
+  hsl(168deg 100% 2%) 100%
+);
+  height: 100%;
+  position: relative;
+  font-size: 2.3rem;
+}
+
+.App {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.calculator {
+  padding: 10px;
+  height: 650px;
+  width: 360px;
+  border-radius: 15px;
+  border: 5px solid #133740;
+  background-color: #051b1f;;
+}
+
+.buttons {
+  height: 75%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+@media screen and (max-height : 655px) {
+  .calculator {
+    height: 90vh;
+  }
+}
+
+@media screen and (min-width : 768px) {
+  .calculator {
+    width: 45vw;
+  }
+}
+
+@media screen and (min-width : 1024px) {
+  .calculator {
+    width: 36vw;
+  }
+}

@@ -1,0 +1,12 @@
+.Screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    font-size: 2.5rem;
+    color: #3f868d;
+    padding: 10px;
+    height: 25%;
+    border-radius: 15px;
+    background-color: #000a08;
+}
