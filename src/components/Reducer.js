@@ -1,44 +1,24 @@
 //Import calc
-import { calc } from "./Calcul";
+import { calcul } from "./Calcul";
 
    // state de base
 const initialState = {
-    screen: "",
-    valueOne: "",
-    valueTwo: null,
-    operator: ""
+    screen: null,
   }
-
-// const calcElements = ['-', 3, '+', 1];
 
   // actions du reducer
   const reducer = (state, action) => {
 
     switch (action.type) {
 
+      case 'operator':
       case 'number':
         return {
           // on copie le state
           ...state,
           // à l'écran, on rajoute à chaque onClick la value du number
-          valueOne: [state.valueOne] + action.payload,
+          // valueOne: [state.valueOne] + action.payload,
           screen : [state.screen] + action.payload,
-
-        };
-
-      case 'operator':
-        return {
-          // on copie le state
-          ...state,
-          screen : [state.screen] + action.payload,
-
-          // on met la valeur de valueOne dans valueTwo
-          valueTwo: [state.valueOne],
-          // on vide valueOne
-          valueOne: "",
-
-          // on garde l'operator dans la copie du state
-          operator: action.payload
 
         };
 
@@ -47,15 +27,14 @@ const initialState = {
             // on copie le state
             ...state,
 
-            screen:"" + calc(state.valueTwo, state.valueOne, state.operator),
-            valueOne: calc(state.valueTwo, state.valueOne, state.operator)
+            screen: calcul([state.screen]),
+            // valueOne: calc([state.screen]),
           };
 
       case "delete":
         return {
           initialState
         }  
-
 
       default:
         throw new Error();
